@@ -1,6 +1,7 @@
 "use client";
 
 import { useLinkStatus } from "next/link";
+import Loader from '@/components/loader';
 
 export default function NavLink({ children, className }) {
     const { pending } = useLinkStatus();
@@ -9,7 +10,7 @@ export default function NavLink({ children, className }) {
         <span
             className={className}
         >
-            {pending ? "Loading..." : children}
+            {pending ? <Loader /> : children}
         </span>
     );
 }
