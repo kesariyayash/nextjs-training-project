@@ -1,0 +1,33 @@
+[
+  {
+    "_id": "64f1a9c1e1a1a1a1a1a1a1a1",
+    "id":"1",
+    "title": "React from File DB",
+    "slug": "react",
+    "content": "This post is read from a file-based database that mimics MongoDB.",
+    "tags": ["react", "frontend"],
+    "published": true,
+    "createdAt": "2024-01-01T10:00:00.000Z"
+  },
+  {
+    "_id": "64f1a9c1e1a1a1a1a1a1a1a2",
+    "id":"2",
+    "title": "Next.js from File DB",
+    "slug": "nextjs",
+    "content": "This post structure closely resembles a MongoDB document.",
+    "tags": ["nextjs", "react"],
+    "published": true,
+    "createdAt": "2024-01-05T15:30:00.000Z"
+  },
+  {
+    "_id": "64f1a9c1e1a1a1a1a1a1a1a3",
+    "id":"3",
+    "title": "Details about Yash Kesariya",
+    "slug": "yash",
+    "content": "Welcome, I am Yash, This is my learning project.",
+    "tags": ["nextjs", "learning project", "internship-training"],
+    "published": true,
+    "createdAt": "2024-01-05T18:30:00.000Z"
+  }
+
+]
