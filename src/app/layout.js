@@ -17,7 +17,7 @@ export async function generateMetadata() {
             template: "%s | Nextjs",
         },
         description: "Learning Next.js App Router concepts",
-        applicationName: "Layouts Demo Mongo",
+        applicationName: "Next.js Learning Project",
         authors: [{ name: "Yash" }],
         openGraph: {
             title: "Next.js App Router Project",
