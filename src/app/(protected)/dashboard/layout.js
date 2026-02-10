@@ -1,9 +1,9 @@
 import { Suspense } from 'react';
-import Loading from '@/components/Loading';
+import Loader from '@/components/loader';
 
 export default function DashboardLayout({ children }) {
     return (
-        <Suspense fallback={Loading}>
+        <Suspense fallback={<Loader />}>
             {children}
         </Suspense>
     );
