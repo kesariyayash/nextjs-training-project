@@ -13,8 +13,8 @@ export async function generateViewport() {
 export async function generateMetadata() {
     return {
         title: {
-            default: "Layouts Demo Mongo",
-            template: "%s | Layouts Demo Mongo",
+            default: "Nextjs Learning Project",
+            template: "%s | Nextjs",
         },
         description: "Learning Next.js App Router concepts",
         applicationName: "Layouts Demo Mongo",
