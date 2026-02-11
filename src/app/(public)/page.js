@@ -21,14 +21,14 @@ export default function HomePage() {
             <ul className="space-y-2 ml-4">
 
               <li>
-                <Link href="/" className="text-blue-500 hover:text-red-300 mr-3">
+                <Link href="/" className="text-blue-500 hover:underline">
                   /
                 </Link>
                 <span className="text-gray-400 text-sm"> → Home - Index Page</span>
               </li>
 
               <li>
-                <Link href="/about" className="text-blue-400 hover:text-red-300 mr-3">
+                <Link href="/about" className="text-blue-400 hover:underline">
                   /about
                 </Link>
                 <span className="text-gray-400 text-sm"> → Error Handling using <b>error.js</b>. </span>

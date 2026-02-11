@@ -1,6 +1,6 @@
 export default function UserListSkeleton() {
     return (
-        <div className="border border-blue-500 rounded-md p-4 space-y-3">
+        <div className="border border-blue-500 rounded-md p-4 space-y-3 mt-4">
             {[1, 2, 3].map((item) => (
                 <div key={item} className="animate-pulse flex items-center gap-2">
 
