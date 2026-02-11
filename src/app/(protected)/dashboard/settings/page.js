@@ -37,7 +37,7 @@ export default async function SettingsPage() {
                         </p>
 
                         <input type="hidden" name="userId" value={user._id} />
-                        <input className="border-1 border-black rounded-md placeholder:text-black p-1 mt-2" name="role" placeholder="enter updated role" />
+                        <input className="bg-white border-1 border-black rounded-md placeholder:text-black p-1 mt-2" name="role" placeholder="enter updated role" />
 
                         <button type="submit" className="mt-4 ml-2.5 px-2.5 py-1 cursor-pointer bg-black text-white rounded-lg hover:bg-gray-800 hover:opacity-90">
                             Update Role
