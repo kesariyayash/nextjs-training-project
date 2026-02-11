@@ -4,6 +4,7 @@ import AdminUsersClient from "../../../components/AdminUsersClient";
 import AdminUsersSWR from "@/components/AdminUsersSWR";
 import AdminUsersRQ from "@/components/AdminUsersRQ";
 import Link from "next/link";
+import UserListSkeleton from "@/components/UserListSkeletonLoader";
 
 export async function generateMetadata() {
     return {
@@ -28,7 +29,7 @@ export default function AdminPage() {
             </p>
 
             {/* 🔹 Client Component consuming server-started async data */}
-            <Suspense fallback={<p className="mt-5">Loading admin users...</p>}>
+            <Suspense fallback={<UserListSkeleton />}>
                 <AdminUsersClient usersPromise={usersPromise} />
             </Suspense>
 

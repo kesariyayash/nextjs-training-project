@@ -5,6 +5,7 @@ import AdminAddUserForm from "./AdminAddUserForm";
 import AdminUpdateUserForm from "./AdminUpdateUserForm";
 import AdminPatchUserForm from "./AdminPatchUserForm";
 import AdminDeleteUserForm from "./AdminDeleteUserForm";
+import UserListSkeleton from "./UserListSkeletonLoader";
 
 async function fetchAdminUsers() {
     const res = await fetch("/api/admin-users");
@@ -28,7 +29,7 @@ export default function AdminUsersRQ() {
     });
 
     if (isLoading) {
-        return <p>Loading admin users (React Query)...</p>;
+        return <UserListSkeleton />;
     }
 
     if (error) {

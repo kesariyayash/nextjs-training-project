@@ -1,6 +1,7 @@
 "use client";
 
 import useSWR from "swr";
+import UserListSkeleton from "./UserListSkeletonLoader";
 
 // Simple fetcher function
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -9,15 +10,15 @@ export default function AdminUsersSWR() {
     const { data, error, isLoading } = useSWR("/api/admin-users", fetcher);
 
     if (isLoading) {
-        return <p>Loading admin users...</p>;
+        return <UserListSkeleton />;
     }
 
     if (error) {
-        return <p>Failed to load users</p>;
+        return <p>Failed to load users via SWR</p>;
     }
 
     return (
-        <div
+        <div className="mt-4 p-4 bg-[#020617] border border-[#ecc411] rounded-md"
             style={{
                 marginTop: "16px",
                 padding: "16px",

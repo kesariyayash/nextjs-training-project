@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
+import ImageSkeleton from "@/components/ImageSkeletonLoader";
 
 export const metadata = {
     title: "Images/Fonts",
@@ -34,19 +36,21 @@ export default function ImagesPage() {
                     />
                 </div>
 
-                <div>
-                    <div className="flex flex-col justify-center items-center bg-white border-3 border-gray-500 rounded-md mb-5 p-3">
-                        <h2 className="font-semibold">Remote Image</h2>
-                        <p className="text-sm">(exists on unsplash - add hostname in next.config.mjs) </p>
+                <Suspense fallback={<ImageSkeleton />}>
+                    <div>
+                        <div className="flex flex-col justify-center items-center bg-white border-3 border-gray-500 rounded-md mb-5 p-3">
+                            <h2 className="font-semibold">Remote Image</h2>
+                            <p className="text-sm">(exists on unsplash - add hostname in next.config.mjs) </p>
+                        </div>
+                        <Image
+                            src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d"
+                            alt="Remote example"
+                            width={400}
+                            height={300}
+                            className="border-3 border-gray-500 object-cover w-[400px] h-[400px] rounded-full hover:opacity-80 transition-opacity"
+                        />
                     </div>
-                    <Image
-                        src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d"
-                        alt="Remote example"
-                        width={400}
-                        height={300}
-                        className="border-3 border-gray-500 object-cover w-[400px] h-[400px] rounded-full hover:opacity-80 transition-opacity"
-                    />
-                </div>
+                </Suspense>
             </div>
 
             <div className="mt-5 flex flex-col justify-center items-center">
