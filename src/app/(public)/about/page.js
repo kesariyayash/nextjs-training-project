@@ -46,7 +46,7 @@ export default async function AboutPage() {
                         name="message"
                         required
                         placeholder="enter message"
-                        className="mt-2 p-5 border border-black-600 rounded-md bg-gray-300"
+                        className="mt-2 p-2 border border-black-600 rounded-md bg-white"
                     />
                 </label>
 

@@ -17,7 +17,7 @@ export default function AdminPage() {
     const usersPromise = getAllAdminUsers();
 
     return (
-        <div className="p-10 bg-[#020617] height-screen text-[#e5e7eb]">
+        <div className="p-10 bg-[#020617] min-h-screen text-[#e5e7eb]">
             <h1 className="flex items-center justify-between text-4xl text-[#ecc411] font-semibold">
                 Admin Page
             </h1>
