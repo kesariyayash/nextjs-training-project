@@ -1,5 +1,6 @@
 import Providers from "./providers";
 import "./globals.css";
+import { AuthProvider } from "@/context/AuthContext";
 
 export async function generateViewport() {
     return {
@@ -34,7 +35,8 @@ export default function RootLayout({ children }) {
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
             </head>
             <body>
-                <Providers>{children}</Providers>
+
+                <Providers><AuthProvider>{children}</AuthProvider></Providers>
             </body>
         </html>
     );

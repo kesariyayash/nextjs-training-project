@@ -32,4 +32,18 @@ if (process.env.NODE_ENV === "development") {
     clientPromise = client.connect();
 }
 
+
+export async function getDb() {
+    const client = await clientPromise;
+    const db = client.db("admin_db"); // your database name
+
+    // Ensure unique index on users.email
+    await db.collection("users").createIndex(
+        { email: 1 },
+        { unique: true }
+    );
+
+    return db;
+}
+
 export default clientPromise;

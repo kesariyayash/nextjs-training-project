@@ -1,12 +1,20 @@
-
+import LogoutButton from "@/components/LogoutButton";
+import WelcomeUser from "@/components/WelcomeUser";
 import Link from "next/link";
 
-export default function HomePage() {
+
+export default async function HomePage() {
   return (
-    <div className="min-h-screen bg-black text-white p-10">
-      <h1 className="text-3xl font-bold">Home Page</h1>
+    <div className="min-h-screen bg-black text-white p-10 relative">
+
+      <div className="absolute top-5 right-8">
+        <LogoutButton />
+      </div>
+
+      <WelcomeUser />
+
       <br />
-      <p>Welcome to my <b>next.js</b> Learning Project!!!</p>
+      <p>Start Browsing <b>next.js</b> Full Stack Training Project!!!</p>
       <p className="text-sm text-white bg-blue-600 border-black mt-5 px-2 rounded-lg w-fit">stlyed using <b>tailwind css</b></p>
       <p className="text-sm text-white bg-blue-600 border-black mt-2 px-2 rounded-lg w-fit">created by <b>yash kesariya</b></p>
 
@@ -15,9 +23,11 @@ export default function HomePage() {
         <h2 className="text-2xl font-bold mb-6">Route Index</h2>
 
         <div className="space-y-6">
-          {/* Public Routes */}
+          <hr className="text-white opacity-80" />
+
+          {/* Protected Routes */}
           <div>
-            <h3 className="text-xl font-semibold mb-3">Public Route Group Routes List : </h3>
+            <h3 className="text-xl font-semibold mb-3">Protected Route Group Routes List : </h3>
             <ul className="space-y-2 ml-4">
 
               <li>
@@ -50,16 +60,6 @@ export default function HomePage() {
                 <span className="text-sm mr-1 text-blue-400">/blog/[slug]/comments/[commentId] (not a link)</span>
                 <span className="text-gray-400 text-sm">→ it is a nested dynamic route page where the slug(blog) and the other nested slug(comments) within it is printed on the screen using <b>params</b>.</span>
               </li>
-
-            </ul>
-          </div>
-
-          <hr className="text-white opacity-80" />
-
-          {/* Protected Routes */}
-          <div>
-            <h3 className="text-xl font-semibold mb-3">Protected Route Group Routes List : </h3>
-            <ul className="space-y-2 ml-4">
 
               <li>
                 <Link href="/dashboard" className="text-blue-400 hover:underline">
@@ -97,27 +97,20 @@ export default function HomePage() {
                   &amp; useMuation()</b>, via <b>GET, PUT, POST, DELETE</b> http methods.</span>
               </li>
 
-            </ul>
-          </div>
-
-          <hr className="text-white opacity-80" />
-
-          {/* Cache Demo Routes */}
-          <div>
-            <h3 className="text-xl font-semibold mb-3">Cache Demo Route Group Routes List : </h3>
-            <ul className="space-y-2 ml-4">
               <li>
                 <Link href="/cachetag" className="text-blue-400 hover:underline">
                   /cachetag
                 </Link>
                 <span className="text-gray-400 text-sm"> → implemented <b>revalidateTag, updateTag, revalidatePath</b> using a demo time data and custom API.</span>
               </li>
+
               <li>
                 <Link href="/fetch" className="text-blue-400 hover:underline">
                   /fetch
                 </Link>
                 <span className="text-gray-400 text-sm"> → implemented <b>fetch()</b> api with three different cache strategies i.e. <b>default, force-cache, no-store</b>.</span>
               </li>
+
             </ul>
           </div>
 
@@ -149,10 +142,9 @@ export default function HomePage() {
             <h3 className="text-xl font-semibold mb-3">API Routes</h3>
             <ul className="space-y-2 ml-4">
               <li>
-                <Link href="/api/admin-users" className="text-blue-400 hover:underline">
-                  /api/admin-users
-                </Link>
-                <span className="text-gray-400 text-sm"> → implemented BASIC data fetching and updating using <b>GET, POST, PUT, PATCH, DELETE</b>.</span>
+                <span className="text-gray-400 text-sm"> → implemented data fetching and updating API using <b>GET, POST, PUT, PATCH, DELETE</b>.</span>
+                <br />
+                <span className="text-gray-400 text-sm"> → implemented signup, login, logout API using statleful JWT authentication.</span>
               </li>
             </ul>
           </div>
