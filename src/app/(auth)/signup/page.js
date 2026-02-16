@@ -33,6 +33,10 @@ export default function SignupPage() {
                 throw new Error(data.message || "Signup failed");
             }
 
+            setName("");
+            setEmail("");
+            setPassword("");
+
             // Redirect
             router.push("/login");
             router.refresh();

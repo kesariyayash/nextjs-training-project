@@ -37,6 +37,9 @@ export default function LoginPage() {
             // Update context immediately
             setUser(data.user);
 
+            setEmail("");
+            setPassword("");
+
             // Redirect
             router.push("/");
             router.refresh();

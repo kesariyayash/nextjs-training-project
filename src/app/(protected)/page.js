@@ -5,15 +5,15 @@ import Link from "next/link";
 
 export default async function HomePage() {
   return (
-    <div className="min-h-screen bg-black text-white p-10 relative">
+    <div className="min-h-screen bg-black text-white p-10">
 
-      <div className="absolute top-5 right-8">
-        <LogoutButton />
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-6">
+        <WelcomeUser />
+        <div className="sm:ml-4 flex-shrink-0">
+          <LogoutButton />
+        </div>
       </div>
 
-      <WelcomeUser />
-
-      <br />
       <p>Start Browsing <b>next.js</b> Full Stack Training Project!!!</p>
       <p className="text-sm text-white bg-blue-600 border-black mt-5 px-2 rounded-lg w-fit">stlyed using <b>tailwind css</b></p>
       <p className="text-sm text-white bg-blue-600 border-black mt-2 px-2 rounded-lg w-fit">created by <b>yash kesariya</b></p>
