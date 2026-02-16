@@ -19,12 +19,14 @@ export default function LogoutButton() {
                 throw new Error("Logout failed");
             }
             // Clear user context immediately
-            setUser(null);
-            setLoading(false);
-            // Redirect to welcome page
-            router.push("/welcome");
-            router.refresh();
+            if (res.ok) {
+                // redirect to welcome page
+                router.push("/welcome");
+                router.refresh();
 
+                setUser(null);
+                setLoading(false);
+            }
         } catch (err) {
             console.error("Logout error:", err);
         }
