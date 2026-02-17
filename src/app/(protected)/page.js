@@ -144,7 +144,7 @@ export default async function HomePage() {
               <li>
                 <span className="text-gray-400 text-sm"> → implemented data fetching and updating API using <b>GET, POST, PUT, PATCH, DELETE</b>.</span>
                 <br />
-                <span className="text-gray-400 text-sm"> → implemented signup, login, logout API using statleful JWT authentication.</span>
+                <span className="text-gray-400 text-sm"> → implemented <b>signup, login, logout API</b> using <b>statleful JWT authentication and a custom Auth-Context Manager</b>.</span>
               </li>
             </ul>
           </div>
