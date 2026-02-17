@@ -9,7 +9,7 @@ export default async function HomePage() {
 
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-6">
         <WelcomeUser />
-        <div className="absolute top-12 right-10 sm:ml-4 flex-shrink-0">
+        <div className="absolute top-5 right-5 sm:ml-4">
           <LogoutButton />
         </div>
       </div>

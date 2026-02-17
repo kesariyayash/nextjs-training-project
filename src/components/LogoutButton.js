@@ -21,11 +21,11 @@ export default function LogoutButton() {
             // Clear user context immediately
             if (res.ok) {
                 // redirect to welcome page
-                router.push("/welcome");
-                router.refresh();
-
+                //router.push("/welcome");
+                //router.refresh();
                 setUser(null);
                 setLoading(false);
+                window.location.replace('/login')
             }
         } catch (err) {
             console.error("Logout error:", err);
@@ -36,7 +36,7 @@ export default function LogoutButton() {
         <button
             onClick={handleLogout}
             disabled={loading}
-            className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 font-semibold"
+            className="bg-red-600 text-white px-3 py-2 rounded hover:bg-red-700 font-semibold"
         >
             {loading ? "Logging Out ..." : "Logout"}
         </button>
